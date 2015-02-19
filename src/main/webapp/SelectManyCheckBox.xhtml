@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Componente SelectManyCheckbox</title>
+    </h:head>
+    <h:body>
+        <h:form>
+
+            <h:selectManyCheckbox id="listBox" value="#{linguagemBean.linguagensFavoritas}">
+                <f:selectItem itemLabel="Java" itemValue="Java"/>
+                <f:selectItem itemLabel="C" itemValue="C"/>
+                <f:selectItem itemLabel="Python" itemValue="Python"/>
+            </h:selectManyCheckbox>
+
+            <h:commandButton value="Escolher" />
+
+            <br/>
+            <br/>
+
+        </h:form>
+
+        <ui:repeat var="escolha" value="#{linguagemBean.linguagensFavoritas}">
+            <li>#{escolha}</li>
+        </ui:repeat>
+
+
+
+    </h:body>
+</html>

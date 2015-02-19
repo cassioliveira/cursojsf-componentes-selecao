@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Componente SelectOneListBox</title>
+    </h:head>
+    <h:body>
+        <h:form>
+
+            <h:selectOneListbox id="listBox" value="#{linguagemBean.linguagem.linguagemFavorita}">
+                <f:selectItem itemLabel="Java" itemValue="Java"/>
+                <f:selectItem itemLabel="Python" itemValue="Python"/>
+                <f:selectItem itemLabel="C" itemValue="C"/>
+            </h:selectOneListbox>
+
+            <h:commandButton value="Escolher"/>
+
+            <br/>
+            <br/>
+
+            <h:outputLabel value="#{linguagemBean.linguagem.linguagemFavorita}"/>
+        </h:form>
+        
+    </h:body>
+</html>
