@@ -9,11 +9,11 @@
     <h:body>
         <h:form>
 
-            <h:selectManyMenu id="listBox" value="#{linguagemBean.linguagem.linguagemFavorita}">
+            <h:selectOneMenu id="listBox" value="#{linguagemBean.linguagem.linguagemFavorita}">
                 <f:selectItem itemLabel="Java" itemValue="Java"/>
                 <f:selectItem itemLabel="Python" itemValue="Python"/>
                 <f:selectItem itemLabel="C" itemValue="C"/>
-            </h:selectManyMenu>
+            </h:selectOneMenu>
 
             <h:commandButton value="Escolher"/>
 
@@ -22,6 +22,12 @@
 
             <h:outputLabel value="#{linguagemBean.linguagem.linguagemFavorita}"/>
         </h:form>
+        
+        <br/>
+        <br/>
+        <h:outputLink value="selecao.xhtml">
+            Voltar para seleção de componentes
+        </h:outputLink>
 
     </h:body>
 </html>

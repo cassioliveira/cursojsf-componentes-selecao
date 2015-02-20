@@ -9,8 +9,9 @@
     </h:head>
     <h:body>
         <h:form>
-
-            <h:selectManyMenu id="listBox" value="#{linguagemBean.linguagensFavoritas}">
+            
+            <!--Este componente apresentou problemas na renderização no Chrome e Firefox. Teste no safari do MAC funcionou bem.-->
+            <h:selectManyMenu id="listBox" value="#{linguagensBean.linguagensFavoritas}">
                 <f:selectItem itemLabel="Java" itemValue="Java"/>
                 <f:selectItem itemLabel="Python" itemValue="Python"/>
                 <f:selectItem itemLabel="C" itemValue="C"/>
@@ -23,11 +24,15 @@
 
         </h:form>
 
-        <ui:repeat var="escolha" value="#{linguagemBean.linguagensFavoritas}">
+        <ui:repeat var="escolha" value="#{linguagensBean.linguagensFavoritas}">
             <li>#{escolha}</li>
         </ui:repeat>
 
-
+        <br/>
+        <br/>
+        <h:outputLink value="selecao.xhtml">
+            Voltar para seleção de componentes
+        </h:outputLink>
 
     </h:body>
 </html>
